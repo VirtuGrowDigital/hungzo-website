@@ -156,11 +156,11 @@ export default function ExploreCategories() {
 
       <div className="w-full mt-12 md:mt-24">
         <div className="
-  max-w-[1400px]
+  max-w-[1500px]
   mx-auto
-  px-4 md:px-20
-  grid
-  grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+  px-4 md:px-16
+  flex
+  flex-col
   gap-8 md:gap-10
 ">
 
@@ -440,121 +440,132 @@ export default function ExploreCategories() {
               <div className="h-1 w-20 md:w-24 bg-[#2A2F4F] rounded mb-6"></div>
 
               {/* MOBILE: horizontal scroll | DESKTOP: vertical list */}
-              <div
-                className="
+              {/* PRODUCTS SLIDER */}
+<div
+  className="
     flex
-    gap-4 md:gap-5
+    flex-nowrap
+    gap-5
     overflow-x-auto
     scroll-smooth
-    snap-x snap-mandatory
     hide-scrollbar
-    pb-2
+    pb-3
+    snap-x snap-mandatory
     cursor-grab
     active:cursor-grabbing
   "
-                style={{
-                  WebkitOverflowScrolling: "touch",
-                }}
-              >
+  style={{
+    WebkitOverflowScrolling: "touch",
+  }}
+  onWheel={(e) => {
+    e.currentTarget.scrollLeft += e.deltaY;
+  }}
+>
 
-                {section.products.map((p, i) => (
-                  <div
-                    key={i}
-                    className="
-                    w-[260px]
-                    shrink-0
-                    snap-start
-                    bg-white
-                    rounded-2xl
-                    p-4
-                    flex
-                    items-center
-                    gap-4
-                    border border-[#F1F1F1]
-                    hover:border-[#2EC4B6]
-                    hover:shadow-lg
-                    transition-all duration-300
-                  "
-                  >
-                    {/* IMAGE */}
-                    <div
-                      className="
-                      w-24 h-24
-                      bg-[#F8F8F8]
-                      rounded-2xl
-                      flex
-                      items-center
-                      justify-center
-                      overflow-hidden
-                      shrink-0
-                      p-2
-                    "
-                    >
-                      <img
-                        src={p.img}
-                        alt={p.name}
-                        className="
-                        w-full h-full
-                        object-contain
-                        transition-transform duration-300
-                        hover:scale-110
-                      "
-                      />
-                    </div>
+  {section.products.map((p, i) => (
+    <div
+      key={i}
+      className="
+        min-w-[300px]
+        md:min-w-[380px]
+        xl:min-w-[420px]
+        shrink-0
+        snap-start
+        bg-white
+        rounded-3xl
+        p-5 md:p-6
+        flex
+        items-center
+        gap-5
+        border border-[#F1F1F1]
+        hover:border-[#2EC4B6]
+        hover:shadow-2xl
+        transition-all duration-300
+      "
+    >
 
-                    {/* DETAILS */}
-                    <div className="flex flex-col flex-1 min-w-0">
+      {/* IMAGE */}
+      <div
+        className="
+          w-28 h-28
+          md:w-32 md:h-32
+          bg-[#F8F8F8]
+          rounded-3xl
+          flex
+          items-center
+          justify-center
+          overflow-hidden
+          shrink-0
+          p-3
+        "
+      >
+        <img
+          src={p.img}
+          alt={p.name}
+          className="
+            w-full
+            h-full
+            object-contain
+            transition-transform duration-300
+            hover:scale-110
+          "
+        />
+      </div>
 
-                      <h3
-                        className="
-                        text-sm md:text-[15px]
-                        font-semibold
-                        text-[#1A1F2F]
-                        leading-snug
-                        line-clamp-2
-                      "
-                      >
-                        {p.name}
-                      </h3>
+      {/* DETAILS */}
+      <div className="flex flex-col flex-1 min-w-0">
 
-                      <p className="text-xs text-gray-400 mt-1">
-                        Premium Quality
-                      </p>
+        <h3
+          className="
+            text-base
+            md:text-lg
+            font-bold
+            text-[#1A1F2F]
+            leading-snug
+            line-clamp-2
+          "
+        >
+          {p.name}
+        </h3>
 
-                      <div className="flex items-center gap-2 mt-3 flex-wrap">
+        <p className="text-sm text-gray-400 mt-1">
+          Premium Quality Product
+        </p>
 
-                        <span className="text-[#23A989] text-lg font-bold">
-                          {p.price}
-                        </span>
+        <div className="flex items-center gap-3 mt-4 flex-wrap">
 
-                        <span className="text-gray-400 line-through text-sm">
-                          {p.oldPrice}
-                        </span>
+          <span className="text-[#23A989] text-2xl font-bold">
+            {p.price}
+          </span>
 
-                      </div>
+          <span className="text-gray-400 line-through text-base">
+            {p.oldPrice}
+          </span>
 
-                      <div className="mt-2">
-                        <span
-                          className="
-                          inline-flex
-                          items-center
-                          text-[11px]
-                          bg-[#E9FBF7]
-                          text-[#23A989]
-                          px-2 py-1
-                          rounded-full
-                          font-medium
-                        "
-                        >
-                          Best Seller
-                        </span>
-                      </div>
+        </div>
 
-                    </div>
-                  </div>
-                ))}
+        <div className="mt-3">
+          <span
+            className="
+              inline-flex
+              items-center
+              text-xs
+              bg-[#E9FBF7]
+              text-[#23A989]
+              px-3 py-1.5
+              rounded-full
+              font-semibold
+            "
+          >
+            Best Seller
+          </span>
+        </div>
 
-              </div>
+      </div>
+    </div>
+  ))}
+
+</div>
 
             </div>
           ))}
