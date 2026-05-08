@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Noodles from "../assets/Images/Noodles.png";
 import SpiceS from "../assets/Images/SpicesSmall.png";
 import Sauces from "../assets/Images/Sauces.png";
@@ -7,18 +8,46 @@ import VegetablesSmall from "../assets/Images/VegetableSmall.png";
 import Dairy from "../assets/Images/Dairy.png";
 import Pulses from "../assets/Images/Pulses.png";
 import Coffee from "../assets/Images/Coffee.jpg";
-import Orange from "../assets/Images/Orange.png";
-import Spinnach from "../assets/Images/Spinnach.png";
-import Strawberry from "../assets/Images/Strawberry.png";
-import Pers from "../assets/Images/Pers.png";
-import Apple from "../assets/Images/Apple.png";
-import Carrot from "../assets/Images/Carrot.png";
-import Potatoes from "../assets/Images/Potatoe.png";
-import GrApple from "../assets/Images/GreenApple.png";
-import GrBeans from "../assets/Images/GreenBeans.webp";
-import Mandarin from "../assets/Images/mandarin.avif";
-import Berry from "../assets/Images/Berry.webp";
-import Raddish from "../assets/Images/raddish.webp";
+
+import LimeSeasoning from "../assets/Images/LimeSeasoning.png";
+import AromatPowder from "../assets/Images/AromatPowder.png";
+import PremiumAromat from "../assets/Images/PremiumAromat.png";
+import OreganoSprinkler from "../assets/Images/OreganoSprinkler.png";
+import ChilliFlakes from "../assets/Images/ChilliFlakes.png";
+import ChilliGarlic from "../assets/Images/ChilliGarlic.png";
+import PeriPeri from "../assets/Images/PeriPeri.png";
+import PizzaSpice from "../assets/Images/PizzaSpice.png";
+import LemonChilli from "../assets/Images/LemonChilli.png";
+import ChilliFlakesBig from "../assets/Images/ChilliFlakesBig.png";
+import PizzaSpiceBig from "../assets/Images/PizzaSpiceBig.png";
+
+import TomatoMakhani from "../assets/Images/TomatoMakhani.png";
+import OnionTomato from "../assets/Images/OnionTomato.png";
+import KadhaiGravy from "../assets/Images/KadhaiGravy.png";
+
+import MayoSachet from "../assets/Images/MayoSachet.png";
+import MayoChef from "../assets/Images/MayoChef.webp";
+import MayoProfessional from "../assets/Images/MayoProfessional.png";
+
+import BurgerMayo from "../assets/Images/BurgerMayo.webp";
+import MintMayo from "../assets/Images/MintMayo.png";
+import GarlicMayo from "../assets/Images/GarlicMayo.webp";
+
+import ThousandIsland from "../assets/Images/ThousandIsland.webp";
+import WhiteCheese from "../assets/Images/WhiteCheese.png";
+import GreenChilli from "../assets/Images/GreenChilli.webp";
+
+import PizzaPasta from "../assets/Images/PizzaPasta.webp";
+import PizzaTopping from "../assets/Images/PizzaTopping.webp";
+import Schezwan from "../assets/Images/Schezwan.webp";
+
+import ChilliSachet from "../assets/Images/ChilliSachet.png";
+import OreganoSachet from "../assets/Images/OreganoSachet.png";
+import KetchupSachet from "../assets/Images/KetchupSachet.png";
+
+import VanillaFrappe from "../assets/Images/VanillaFrappe.jpeg";
+import ChocolateFrappe from "../assets/Images/ChocolateFrappe.jpeg";
+import FrappeCoffee from "../assets/Images/FrappeCoffee.jpeg";
 
 export default function ExploreCategories() {
 
@@ -86,7 +115,10 @@ export default function ExploreCategories() {
               <div
                 className="flex items-start md:transition-transform md:duration-500 md:ease-out gap-6 md:gap-10"
                 style={{
-                  transform: window.innerWidth >= 768 ? `translateX(-${index * STEP}px)` : "none",
+                  transform:
+                    typeof window !== "undefined" && window.innerWidth >= 768
+                      ? `translateX(-${index * STEP}px)`
+                      : "none",
                 }}
               >
                 {categories.map((cat, i) => (
@@ -123,67 +155,402 @@ export default function ExploreCategories() {
       {/* --------------------------------------------------------- */}
 
       <div className="w-full mt-12 md:mt-24">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="
+  max-w-[1400px]
+  mx-auto
+  px-4 md:px-20
+  grid
+  grid-cols-1 md:grid-cols-2 xl:grid-cols-3
+  gap-8 md:gap-10
+">
 
           {[
             {
               title: "Top Sells",
               products: [
-                { name: "Fresh Oranges", price: "₹79", oldPrice: "₹99", img: Orange },
-                { name: "Spinach Bundle", price: "₹25", oldPrice: "₹35", img: Spinnach },
-                { name: "Strawberries", price: "₹150", oldPrice: "₹180", img: Strawberry },
+                {
+                  name: "LIME SEASONING",
+                  price: "₹210",
+                  oldPrice: "₹340",
+                  img: LimeSeasoning,
+                },
+                {
+                  name: "AROMAT POWDER",
+                  price: "₹160",
+                  oldPrice: "₹280",
+                  img: AromatPowder,
+                },
+                {
+                  name: "PREMIUM AROMAT POWDER",
+                  price: "₹200",
+                  oldPrice: "₹330",
+                  img: PremiumAromat,
+                },
+              ],
+            },
+
+            {
+              title: "Trending Seasonings",
+              products: [
+                {
+                  name: "OREGANO SPICE SPRINKLER",
+                  price: "₹230",
+                  oldPrice: "₹390",
+                  img: OreganoSprinkler,
+                },
+                {
+                  name: "CHILLI FLAKES",
+                  price: "₹190",
+                  oldPrice: "₹320",
+                  img: ChilliFlakes,
+                },
+                {
+                  name: "CHILLI GARLIC SPRINKLER",
+                  price: "₹140",
+                  oldPrice: "₹220",
+                  img: ChilliGarlic,
+                },
+              ],
+            },
+
+            {
+              title: "Popular Products",
+              products: [
+                {
+                  name: "PERI PERI SPRINKLER",
+                  price: "₹150",
+                  oldPrice: "₹230",
+                  img: PeriPeri,
+                },
+                {
+                  name: "PIZZA SPICE SPRINKLER",
+                  price: "₹190",
+                  oldPrice: "₹320",
+                  img: PizzaSpice,
+                },
+                {
+                  name: "LEMON CHILLI SPRINKLER",
+                  price: "₹110",
+                  oldPrice: "₹160",
+                  img: LemonChilli,
+                },
+              ],
+            },
+
+            {
+              title: "Bulk Packs",
+              products: [
+                {
+                  name: "CHILLI FLAKES 1KG",
+                  price: "₹330",
+                  oldPrice: "₹620",
+                  img: ChilliFlakesBig,
+                },
+                {
+                  name: "PIZZA SPICE SPRINKLER 1KG",
+                  price: "₹370",
+                  oldPrice: "₹610",
+                  img: PizzaSpiceBig,
+                },
+              ],
+            },
+
+            {
+              title: "Gravy Base",
+              products: [
+                {
+                  name: "TOMATO MAKHANI GRAVY BASE",
+                  price: "₹195",
+                  oldPrice: "₹370",
+                  img: TomatoMakhani,
+                },
+                {
+                  name: "ONION TOMATO GRAVY BASE",
+                  price: "₹140",
+                  oldPrice: "₹250",
+                  img: OnionTomato,
+                },
+                {
+                  name: "KADHAI GRAVY",
+                  price: "₹196",
+                  oldPrice: "₹250",
+                  img: KadhaiGravy,
+                },
+              ],
+            },
+
+            {
+              title: "Mayonnaise",
+              products: [
+                {
+                  name: "Eggless Mayonnaise Sachet",
+                  price: "₹293",
+                  oldPrice: "₹350",
+                  img: MayoSachet,
+                },
+                {
+                  name: "Eggless Mayonnaise Chef's Choice",
+                  price: "₹143",
+                  oldPrice: "₹190",
+                  img: MayoChef,
+                },
+                {
+                  name: "Eggless Mayonnaise Professional",
+                  price: "₹130",
+                  oldPrice: "₹180",
+                  img: MayoProfessional,
+                },
+              ],
+            },
+
+            {
+              title: "Dips & Spreads",
+              products: [
+                {
+                  name: "Burger Mayonnaise",
+                  price: "₹202",
+                  oldPrice: "₹260",
+                  img: BurgerMayo,
+                },
+                {
+                  name: "Mint Mayonnaise",
+                  price: "₹231",
+                  oldPrice: "₹300",
+                  img: MintMayo,
+                },
+                {
+                  name: "Garlic Mayonnaise",
+                  price: "₹190",
+                  oldPrice: "₹260",
+                  img: GarlicMayo,
+                },
               ],
             },
             {
-              title: "Top Rated",
+              title: "Dressings",
               products: [
-                { name: "Fresh Persimmon", price: "₹120", oldPrice: "₹140", img: Pers },
-                { name: "Green Beans", price: "₹60", oldPrice: "₹80", img: GrBeans },
-                { name: "Red Apple", price: "₹85", oldPrice: "₹120", img: Apple },
+                {
+                  name: "Thousand Island Dressing",
+                  price: "₹195",
+                  oldPrice: "₹250",
+                  img: ThousandIsland,
+                },
+                {
+                  name: "White Cheese Dressing",
+                  price: "₹185",
+                  oldPrice: "₹240",
+                  img: WhiteCheese,
+                },
+                {
+                  name: "Green Chilli Sauce",
+                  price: "₹59",
+                  oldPrice: "₹90",
+                  img: GreenChilli,
+                },
               ],
             },
+
             {
-              title: "Trending Items",
+              title: "Pizza & Pasta",
               products: [
-                { name: "Carrots 1kg", price: "₹30", oldPrice: "₹40", img: Carrot },
-                { name: "Potatoes 1kg", price: "₹20", oldPrice: "₹30", img: Potatoes },
-                { name: "Mandarins", price: "₹95", oldPrice: "₹110", img: Mandarin },
+                {
+                  name: "Pizza & Pasta Sauce",
+                  price: "₹185",
+                  oldPrice: "₹250",
+                  img: PizzaPasta,
+                },
+                {
+                  name: "Pizza Topping",
+                  price: "₹172",
+                  oldPrice: "₹240",
+                  img: PizzaTopping,
+                },
+                {
+                  name: "Schezwan Sauce",
+                  price: "₹185",
+                  oldPrice: "₹240",
+                  img: Schezwan,
+                },
               ],
             },
+
             {
-              title: "Recently Added",
+              title: "Seasoning Sachets",
               products: [
-                { name: "Green Apple Fresh", price: "₹89", oldPrice: "₹120", img: GrApple },
-                { name: "Fresh Raddish", price: "₹28", oldPrice: "₹35", img: Raddish },
-                { name: "Fresh Berry", price: "₹160", oldPrice: "₹190", img: Berry },
+                {
+                  name: "Chilli Flakes Sachet",
+                  price: "₹54",
+                  oldPrice: "₹80",
+                  img: ChilliSachet,
+                },
+                {
+                  name: "Oregano Seasoning Sachet",
+                  price: "₹54",
+                  oldPrice: "₹80",
+                  img: OreganoSachet,
+                },
+                {
+                  name: "Tomato Ketchup Sachet",
+                  price: "₹69",
+                  oldPrice: "₹95",
+                  img: KetchupSachet,
+                },
+              ],
+            },
+
+            {
+              title: "Coffee & Frappe",
+              products: [
+                {
+                  name: "Frappe Mix Vanilla",
+                  price: "₹380",
+                  oldPrice: "₹450",
+                  img: VanillaFrappe,
+                },
+                {
+                  name: "Frappe Mix Chocolate",
+                  price: "₹533",
+                  oldPrice: "₹620",
+                  img: ChocolateFrappe,
+                },
+                {
+                  name: "Frappe Coffee",
+                  price: "₹553",
+                  oldPrice: "₹650",
+                  img: FrappeCoffee,
+                },
               ],
             },
           ].map((section, idx) => (
-            <div key={idx} className="mb-12">
+            <div
+              key={idx}
+              className="
+    mb-4
+    bg-[#FAFAFA]
+    rounded-3xl
+    p-5 md:p-7
+    border border-[#ECECEC]
+    shadow-sm
+    hover:shadow-md
+    transition
+  "
+            >
 
-              <h2 className="text-xl md:text-2xl font-semibold text-[#2A2F4F] mb-2">{section.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1A1F2F] mb-2">{section.title}</h2>
               <div className="h-1 w-20 md:w-24 bg-[#2A2F4F] rounded mb-6"></div>
 
               {/* MOBILE: horizontal scroll | DESKTOP: vertical list */}
-              <div className="flex md:flex-col gap-4 md:gap-6 overflow-x-auto md:overflow-visible scroll-smooth">
+              <div
+                className="
+    flex
+    gap-4 md:gap-5
+    overflow-x-auto
+    scroll-smooth
+    snap-x snap-mandatory
+    hide-scrollbar
+    pb-2
+    cursor-grab
+    active:cursor-grabbing
+  "
+                style={{
+                  WebkitOverflowScrolling: "touch",
+                }}
+              >
 
                 {section.products.map((p, i) => (
                   <div
                     key={i}
-                    className="min-w-40 md:min-w-0 flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 bg-white p-3 rounded-xl shadow transition hover:shadow-lg"
+                    className="
+                    w-[260px]
+                    shrink-0
+                    snap-start
+                    bg-white
+                    rounded-2xl
+                    p-4
+                    flex
+                    items-center
+                    gap-4
+                    border border-[#F1F1F1]
+                    hover:border-[#2EC4B6]
+                    hover:shadow-lg
+                    transition-all duration-300
+                  "
                   >
-                    <img src={p.img} className="w-20 h-20 rounded-lg object-cover" />
-
-                    <div>
-                      <p className="font-medium text-[#1A1F2F] text-center md:text-left">{p.name}</p>
-                      <p className="text-yellow-500 text-sm text-center md:text-left">★★★★☆ (4)</p>
-
-                      <p className="text-[#23A989] font-bold text-center md:text-left">
-                        {p.price}
-                        <span className="text-gray-400 line-through ml-2">{p.oldPrice}</span>
-                      </p>
+                    {/* IMAGE */}
+                    <div
+                      className="
+                      w-24 h-24
+                      bg-[#F8F8F8]
+                      rounded-2xl
+                      flex
+                      items-center
+                      justify-center
+                      overflow-hidden
+                      shrink-0
+                      p-2
+                    "
+                    >
+                      <img
+                        src={p.img}
+                        alt={p.name}
+                        className="
+                        w-full h-full
+                        object-contain
+                        transition-transform duration-300
+                        hover:scale-110
+                      "
+                      />
                     </div>
 
+                    {/* DETAILS */}
+                    <div className="flex flex-col flex-1 min-w-0">
+
+                      <h3
+                        className="
+                        text-sm md:text-[15px]
+                        font-semibold
+                        text-[#1A1F2F]
+                        leading-snug
+                        line-clamp-2
+                      "
+                      >
+                        {p.name}
+                      </h3>
+
+                      <p className="text-xs text-gray-400 mt-1">
+                        Premium Quality
+                      </p>
+
+                      <div className="flex items-center gap-2 mt-3 flex-wrap">
+
+                        <span className="text-[#23A989] text-lg font-bold">
+                          {p.price}
+                        </span>
+
+                        <span className="text-gray-400 line-through text-sm">
+                          {p.oldPrice}
+                        </span>
+
+                      </div>
+
+                      <div className="mt-2">
+                        <span
+                          className="
+                          inline-flex
+                          items-center
+                          text-[11px]
+                          bg-[#E9FBF7]
+                          text-[#23A989]
+                          px-2 py-1
+                          rounded-full
+                          font-medium
+                        "
+                        >
+                          Best Seller
+                        </span>
+                      </div>
+
+                    </div>
                   </div>
                 ))}
 

@@ -1,7 +1,9 @@
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+
 import bgimage from "./assets/Images/Background.png";
 import { lazy, Suspense } from "react";
+
 const DailyEssentials = lazy(() => import("./Components/DailyEssentials"));
 const Hero = lazy(() => import("./Components/Hero"));
 const AppDownload = lazy(() => import("./Components/AppDownload"));

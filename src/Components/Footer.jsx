@@ -12,7 +12,6 @@ export default function Footer() {
         {/* LEFT */}
         <div>
           <div className="flex items-center gap-3">
-            {/* <img src={logo} alt="logo" className="w-14 h-14" /> */}
             <img
               src={logo}
               alt="logo"
@@ -35,7 +34,15 @@ export default function Footer() {
 
           <p className="mt-4 flex items-center gap-2 text-lg text-[#1E3A5F] font-semibold">
             <FaPhoneAlt className="text-[#1E3A5F] text-xl" />
-            Call Us: <span className="font-normal ml-1">9278305565</span>
+
+            Call Us:
+
+            <a
+              href="tel:9278305565"
+              className="font-normal ml-1 hover:text-[#23A989] transition"
+            >
+              9278305565
+            </a>
           </p>
         </div>
 
@@ -46,19 +53,46 @@ export default function Footer() {
           <ul className="space-y-3 text-lg text-[#1E3A5F]">
 
             <li>
-              <Link to="/about" className="hover:text-[#23A989] transition">
+              <Link
+                to="/about"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+                className="hover:text-[#23A989] transition"
+              >
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link to="/contact" className="hover:text-[#23A989] transition">
+              <Link
+                to="/contact"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+                className="hover:text-[#23A989] transition"
+              >
                 Contact us
               </Link>
             </li>
 
             <li>
-              <Link to="/career" className="hover:text-[#23A989] transition">
+              <Link
+                to="/career"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+                className="hover:text-[#23A989] transition"
+              >
                 Career
               </Link>
             </li>
@@ -67,14 +101,50 @@ export default function Footer() {
         </div>
 
         {/* RIGHT */}
+        {/* RIGHT */}
         <div>
-          <h3 className="text-xl font-semibold text-[#1E3A5F] mb-4">Connect with us</h3>
+          <h3 className="text-xl font-semibold text-[#1E3A5F] mb-4">
+            Connect with us
+          </h3>
+
           <div className="grid grid-cols-2 gap-x-16 gap-y-6 w-28">
-            {[FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter].map((Icon, i) => (
-              <div key={i} className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer">
-                <Icon className="text-white text-xl" />
-              </div>
-            ))}
+
+            <a
+              href="https://www.facebook.com/share/1KsLErLu2J/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer hover:scale-105 transition"
+            >
+              <FaFacebookF className="text-white text-xl" />
+            </a>
+
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer hover:scale-105 transition"
+            >
+              <FaLinkedinIn className="text-white text-xl" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/hungzo.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer hover:scale-105 transition"
+            >
+              <FaInstagram className="text-white text-xl" />
+            </a>
+
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer hover:scale-105 transition"
+            >
+              <FaTwitter className="text-white text-xl" />
+            </a>
+
           </div>
         </div>
 
@@ -83,7 +153,7 @@ export default function Footer() {
       <div className="w-full border-t border-gray-200 mt-10"></div>
 
       <p className="text-center text-sm text-[#1E3A5F] mt-3">
-        © 2026, All rights reserved
+        © {new Date().getFullYear()}, All rights reserved
       </p>
     </footer>
   );

@@ -46,8 +46,31 @@ export default function AppDownload() {
 
           {/* DESKTOP BUTTONS (inside left block) */}
           <div className="hidden md:flex flex-row justify-start gap-3 mt-20">
-            <img src={appstore} className="h-[58px] object-contain" />
-            <img src={playstore} className="h-[61px] object-contain" />
+
+            <a
+              href="https://apps.apple.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={appstore}
+                className="h-[58px] object-contain hover:scale-105 transition"
+                alt="App Store"
+              />
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=com.hungzo.app&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={playstore}
+                className="h-[61px] object-contain hover:scale-105 transition"
+                alt="Play Store"
+              />
+            </a>
+
           </div>
         </div>
 
@@ -66,8 +89,31 @@ export default function AppDownload() {
 
         {/* MOBILE BUTTONS (always below phones on mobile) */}
         <div className="flex md:hidden flex-row justify-center gap-3 mb-10 mt-4 order-3">
-          <img src={appstore} className="h-[34px] object-contain" />
-          <img src={playstore} className="h-[38px] object-contain" />
+
+          <a
+            href="https://apps.apple.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={appstore}
+              className="h-[34px] object-contain hover:scale-105 transition"
+              alt="App Store"
+            />
+          </a>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hungzo.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={playstore}
+              className="h-[38px] object-contain hover:scale-105 transition"
+              alt="Play Store"
+            />
+          </a>
+
         </div>
 
       </div>

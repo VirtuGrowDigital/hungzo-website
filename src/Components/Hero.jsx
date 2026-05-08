@@ -83,9 +83,14 @@ export default function Hero() {
             </p>
           </p>
 
-          <button className="mt-5 bg-[#2EC4B6] text-white font-semibold text-base px-6 py-3 rounded-full shadow-lg">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hungzo.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block bg-[#2EC4B6] text-white font-semibold text-lg px-10 py-3 rounded-full shadow-xl hover:bg-[#29b3a5] hover:scale-105 transition"
+          >
             Get the App
-          </button>
+          </a>
         </div>
 
         {/* RIGHT — IMAGES ON GREEN PILL BACKGROUND */}
@@ -168,9 +173,14 @@ export default function Hero() {
               vendors.
             </p>
           </p>
-          <button className="mt-4 bg-[#2EC4B6] text-white font-semibold text-lg px-10 py-3 rounded-full shadow-xl hover:bg-[#29b3a5] transition">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hungzo.app&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block bg-[#2EC4B6] text-white font-semibold text-base px-6 py-3 rounded-full shadow-lg hover:scale-105 transition"
+          >
             Get the App
-          </button>
+          </a>
         </div>
 
         {/* RIGHT — original */}
