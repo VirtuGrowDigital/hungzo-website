@@ -48,7 +48,7 @@ export default function AppDownload() {
           <div className="hidden md:flex flex-row justify-start gap-3 mt-20">
 
             <a
-              href="https://apps.apple.com/"
+              href="https://apps.apple.com/in/app/hungzo/id6763050400"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -91,7 +91,7 @@ export default function AppDownload() {
         <div className="flex md:hidden flex-row justify-center gap-3 mb-10 mt-4 order-3">
 
           <a
-            href="https://apps.apple.com/"
+            href="https://apps.apple.com/in/app/hungzo/id6763050400"
             target="_blank"
             rel="noopener noreferrer"
           >

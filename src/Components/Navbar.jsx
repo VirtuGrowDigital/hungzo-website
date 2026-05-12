@@ -17,9 +17,6 @@ export default function Navbar() {
       ============================ */}
       <nav className="hidden md:flex absolute top-[15px] w-full justify-center z-50 bg-white/40 backdrop-blur-md h-[165px]">
         <div className="w-full max-w-[1440px] h-[155px] flex items-center justify-between px-5 md:px-[116px]">
-          {/* LOGO (same size, untouched) */}
-          {/* <img src={logo} alt="logo" className="mt-8 w-[132px] h-[104px] md:w-68 md:h-53 mx-auto md:mx-0" /> */}
-
           <img
             src={logo}
             alt="logo"

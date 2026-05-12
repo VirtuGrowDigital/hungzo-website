@@ -118,14 +118,14 @@ export default function Footer() {
               <FaFacebookF className="text-white text-xl" />
             </a>
 
-            <a
+            {/* <a
               href="https://linkedin.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer hover:scale-105 transition"
             >
               <FaLinkedinIn className="text-white text-xl" />
-            </a>
+            </a> */}
 
             <a
               href="https://www.instagram.com/hungzo.in/"
@@ -136,14 +136,14 @@ export default function Footer() {
               <FaInstagram className="text-white text-xl" />
             </a>
 
-            <a
+            {/* <a
               href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-[#145D5D] flex items-center justify-center cursor-pointer hover:scale-105 transition"
             >
               <FaTwitter className="text-white text-xl" />
-            </a>
+            </a> */}
 
           </div>
         </div>
