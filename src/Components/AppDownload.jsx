@@ -1,51 +1,65 @@
 import React from "react";
-import phone1 from "../assets/Images/Phone-1.png";
-import phone2 from "../assets/Images/Phone-2.png";
+import phone from "../assets/Images/phone.png";
 import appstore from "../assets/Images/Appstore.png";
 import playstore from "../assets/Images/Playstore.png";
 
 export default function AppDownload() {
   return (
-    <section className="w-full mt-20 px-6 md:px-20 bg-[#FFFFFF]">
+    <section className="w-full px-6 md:px-20 py-16 md:py-24 bg-linear-to-b from-white to-[#F8FAFC] mt-20">
+      
       <div
         className="
-          w-full 
+          max-w-7xl mx-auto
+          rounded-4xl
+          bg-white
+          shadow-sm
+          border border-gray-100
+          px-6 md:px-14
+          py-10 md:py-14
           flex flex-col md:flex-row
-          items-center md:items-start 
-          justify-between 
-          gap-10 md:gap-6
+          items-center
+          justify-between
+          gap-10
+          overflow-hidden
         "
       >
-        {/* LEFT BLOCK (TEXT + BUTTONS on desktop) */}
-        <div className="w-full md:w-[55%] lg:w-[60%] flex flex-col md:mt-30 text-center md:text-left order-1">
 
-          {/* TEXT */}
+        {/* LEFT CONTENT */}
+        <div className="w-full md:w-[55%] text-center md:text-left">
+
           <h2
-            className="leading-snug"
+            className="
+              leading-tight
+              text-[30px]
+              sm:text-[36px]
+              md:text-[46px]
+              font-bold
+              text-[#1D2A49]
+            "
             style={{
               fontFamily: "Quicksand, sans-serif",
-              fontSize: "34px",
-              fontWeight: 700,
-              color: "#1D2A49",
             }}
           >
-            Shop Faster With Hungzo <br className="hidden md:block" /> App
+            Shop Faster With <br className="hidden md:block" />
+            Hungzo App
           </h2>
 
           <p
-            className="mt-2"
+            className="
+              mt-4
+              text-[15px]
+              md:text-[17px]
+              text-gray-500
+            "
             style={{
               fontFamily: "Quicksand, sans-serif",
-              fontSize: "15px",
-              fontWeight: 300,
-              color: "#6B7280",
             }}
           >
             Available on both IOS & Android
           </p>
 
-          {/* DESKTOP BUTTONS (inside left block) */}
-          <div className="hidden md:flex flex-row justify-start gap-3 mt-20">
+          {/* DESKTOP BUTTONS */}
+          <div className="hidden md:flex items-center gap-4 mt-10">
 
             <a
               href="https://apps.apple.com/in/app/hungzo/id6763050400"
@@ -54,7 +68,12 @@ export default function AppDownload() {
             >
               <img
                 src={appstore}
-                className="h-[58px] object-contain hover:scale-105 transition"
+                className="
+                  h-[58px]
+                  object-contain
+                  hover:scale-105
+                  transition duration-300
+                "
                 alt="App Store"
               />
             </a>
@@ -66,7 +85,12 @@ export default function AppDownload() {
             >
               <img
                 src={playstore}
-                className="h-[61px] object-contain hover:scale-105 transition"
+                className="
+                  h-[61px]
+                  object-contain
+                  hover:scale-105
+                  transition duration-300
+                "
                 alt="Play Store"
               />
             </a>
@@ -74,21 +98,31 @@ export default function AppDownload() {
           </div>
         </div>
 
-        {/* RIGHT – PHONES */}
-        <div className="w-full md:w-[45%] lg:w-[50%] flex items-center justify-center relative mt-4 md:mt-15 md:mb-15 order-2">
-          <img
-            src={phone1}
-            className="w-[120px] sm:w-[150px] md:w-[260px] lg:w-[300px] rotate-[-8deg] drop-shadow-2xl relative z-10"
-          />
+        {/* RIGHT IMAGE */}
+        <div className="w-full md:w-[45%] flex items-center justify-center relative">
+
+          {/* Glow Background */}
+          <div className="absolute w-[280px] h-[280px] bg-orange-100 rounded-full blur-3xl opacity-40"></div>
 
           <img
-            src={phone2}
-            className="w-[120px] sm:w-[150px] md:w-[260px] lg:w-[300px] rotate-[8deg] drop-shadow-2xl -ml-8 sm:-ml-10 md:-ml-20"
+            src={phone}
+            alt="Hungzo App"
+            className="
+              relative
+              w-60
+              sm:w-[280px]
+              md:w-[360px]
+              lg:w-[420px]
+              rotate-[8deg]
+              drop-shadow-2xl
+              hover:scale-105
+              transition duration-500
+            "
           />
         </div>
 
-        {/* MOBILE BUTTONS (always below phones on mobile) */}
-        <div className="flex md:hidden flex-row justify-center gap-3 mb-10 mt-4 order-3">
+        {/* MOBILE BUTTONS */}
+        <div className="flex md:hidden justify-center gap-3 mt-2">
 
           <a
             href="https://apps.apple.com/in/app/hungzo/id6763050400"
@@ -97,7 +131,7 @@ export default function AppDownload() {
           >
             <img
               src={appstore}
-              className="h-[34px] object-contain hover:scale-105 transition"
+              className="h-[38px] object-contain"
               alt="App Store"
             />
           </a>
@@ -109,7 +143,7 @@ export default function AppDownload() {
           >
             <img
               src={playstore}
-              className="h-[38px] object-contain hover:scale-105 transition"
+              className="h-[42px] object-contain"
               alt="Play Store"
             />
           </a>
